@@ -1,0 +1,18 @@
+TODO
+
+ * Fill in properties of PBIndex class.
+
+WISHLIST
+
+ * Secure index management.
+
+DONE
+
+  * Replace all calls for parameter isset check with SCTK::get()
+  * Can we remove popoblogentry.php? It doesn't seem to be doing anything
+    apart from acting as a middle layer.
+  * Search for all instances of "POPOKit" and replace them with "SCTK".
+  * "was submitted successfully" message appears on posting comments.
+    The noun is missing.
+  * Override style for comment form.
+  * Send email notification to admin on requestErrors and systemErrors.

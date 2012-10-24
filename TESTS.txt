@@ -1,0 +1,87 @@
+01. BASIC ACCESS.
+
+    Visit / and /<post>/ and ensure they are displayed correctly.
+
+02. META POST ID.
+
+    a. /random/
+    b. /latest/
+    c. /oldest/
+    d. /rss/
+    e. /comment/
+
+03. POST COMMENT.
+
+    a. Post a simple comment with correct fields to a post.
+    b. Post a comment with URL: http://localhost/.
+    c. Post a comment with email: foo@foo.
+    d. Visit /comment/ and check HTML source. Hidden input field for
+       with name "p" should have "" as the value.
+    d. Post a comment using /comment/ with valid name and email.
+       'Malformed URL' error should appear.
+
+04. LINK TAGS.
+
+    a. Check link tags formation in HTML head section for latest post.
+    b. Check link tags formation in HTML head section for oldest post.
+    c. Check link tags formation in HTML head section for an arbitrary
+       post.
+
+05. POST NAVIGATION LINKS
+
+    a. Check navigation links formation for latest post.
+    b. Check navigation links formation for oldest post.
+    c. Check navigation links formation for an arbitrary post.
+
+06. INDEX MANAGEMENT
+
+    a. Visit /?index=foo. A request error should be displayed. An error
+       email should be sent to the admin.
+    b. Visit /?index=delete. The index folder should be deleted.
+    c. Access /. System error shuld be displayed. Email should be sent.
+    d. Access /<valid post>/. System error should be displayed. Email
+       should be sent.
+    e. Visit /?index after deleting index. The index should be recreated.
+    f. Visit /?index=delete. The index folder should be deleted.
+    g. Visit /?index=create. The index should be recreated.
+
+07. LIST ACCESS
+
+    a. Access /. List 1 should be displayed.
+    b. Access /?page=1. List 1 should be displayed. 'Newer' link should
+       be grayed out. 'Older' link should lead to list 2.
+    c. Access /?page=2 using the 'Older' link from previous step. Both
+       'Newer' and 'Older' link should be functional.
+    d. Access /?page=100. Request error should be displayed. Admin is
+       emailed.
+    e. Go to the oldest list displayed in the above error. 'Older' link
+       should be grayed out. 'Newer' link should lead to a newer list.
+       Check formation.
+    f. Access /?page=foo. Same as above.
+    g. Access /?page=0. Same as above.
+    h. Access /?page=-1. Same as above.
+    i. Access /?tags=programming. Only programming posts should be
+       displayed.
+    j. Access /?tags=programming+music. Programming as well as music
+       posts should be displayed.
+    k. 'Newer' link should be grayed out. 'Newer' link should take to
+       list 2 for these tags.
+    l. Access /?page=2&tags=programming+music using the 'Older' link
+       from the previous step. Both 'Newer' and 'Older' link should be
+       functional.
+    m. Access /?page=100&tags=programming+music. Request error should be
+       displayed. Admin is emailed.
+    n. Go to the oldest list displayed in the above error. 'Older' link
+       should be grayed out. 'Newer' link should lead to a newer list.
+
+
+08. TITLE
+
+    a. Check that the home page displays blog display title.
+    b. Check that any post displays post title.
+
+
+09. OUT OF BOUNDS
+
+    a. Access /?page=100. 'List not found' error should be displayed.
+    b. Access /foo. 'Post not found' error should be displayed.
