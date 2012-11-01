@@ -28,6 +28,8 @@
  * @version 0.1
  */
 
+namespace popoblog;
+
 /**
  * POPOBlog index management kit.
  *

@@ -28,6 +28,9 @@
  * @version 0.1
  */
 
+namespace popoblog;
+
+use susam\SCTK;
 
 /**
  * Comment form.

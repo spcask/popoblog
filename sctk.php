@@ -1,4 +1,6 @@
 <?php
+namespace susam;
+
 class SCTK
 {
     public static function rm($name) {

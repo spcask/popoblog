@@ -1,4 +1,8 @@
 <?php
+namespace popoblog;
+
+use susam\SCTK;
+
 class PBView
 {
     // Data.

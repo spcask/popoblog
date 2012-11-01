@@ -1,4 +1,9 @@
 <?php
+namespace popoblog;
+
+use Exception;
+use susam\SCTK;
+
 class PBDB
 {
     private $config;
@@ -128,7 +133,7 @@ class PBDB
     {
         return "<?php\n" .
 
-               '$index = new PBIndex();' . "\n" .
+               '$index = new popoblog\PBIndex();' . "\n" .
 
                '$index->oldestPostID = ' . 
                var_export($index->oldestPostID, TRUE) .
